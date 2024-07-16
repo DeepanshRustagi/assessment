@@ -1,8 +1,8 @@
-import { createSelector } from "@reduxjs/toolkit";
-
 const loadingState = (state: any) => state?.appState?.loading;
 const articals = (state: any) =>
   state?.appState?.articals;
+const articleInfo = (state: any) =>
+  state?.appState?.articleInfo;
 
 
 export const appSelector = {
@@ -11,5 +11,8 @@ export const appSelector = {
   },
   getArticals: () => {
     return articals;
+  },
+  getArticleInfo: () =>{
+    return articleInfo;
   }
 };

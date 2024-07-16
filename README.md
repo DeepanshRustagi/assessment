@@ -29,6 +29,19 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
+## For Windows
+
+In package.json for building the project use
+
+###  "start": "SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+###  "build": "SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
+
+## For Mac
+
+In package.json for building the project use
+
+###  "start": "react-scripts start",
+###  "build": "react-scripts build",
 
 
 ## Version Used

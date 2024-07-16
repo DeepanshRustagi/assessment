@@ -1,13 +1,19 @@
 import React from "react";
 import { getMonthAndDate, getMediaPicture } from "src/common/helper";
+import { useDispatch } from "react-redux";
+import { appSliceActions } from "src/store/reducers/appSlice";
+import { useNavigate } from "react-router-dom";
 
 type ArticalListProps = {
   articalList: Array<any>;
 };
 
 const ArticalList: React.FC<ArticalListProps> = ({ articalList }) => {
-  const openInNewTab = (url: string): void => {
-    window.open(url, "_blank", "noopener,noreferrer");
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const openInNewTab = (article: any): void => {
+    dispatch(appSliceActions.setArticleInfo(article));
+    navigate(`/detail/${article?.id}`);
   };
 
   return (
@@ -17,7 +23,7 @@ const ArticalList: React.FC<ArticalListProps> = ({ articalList }) => {
           data-testid={`articleCard-${artical?.id}`}
           key={artical?.id}
           className="card articalItem"
-          onClick={() => openInNewTab(artical?.url)}
+          onClick={() => openInNewTab(artical)}
         >
           <div className="header">
             <div className="col-md-2" data-testid="publishedDate">
@@ -25,9 +31,9 @@ const ArticalList: React.FC<ArticalListProps> = ({ articalList }) => {
             </div>
             <div className="col-md-6">
               <div data-testid="section">{artical?.section}</div>
-              <div className="title" data-testid="title">
-                {artical?.title}
-              </div>
+                <div className="title" data-testid="title">
+                  {artical?.title}
+                </div>
               <div className="description" data-testid="description">
                 {artical?.abstract}
               </div>

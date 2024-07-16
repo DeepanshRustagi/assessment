@@ -28,7 +28,7 @@ describe("Run App ", () => {
       url: "https://api.nytimes.com/svc/mostpopular/**",
     }).as("getArticles");
     cy.wait(3000);
-    cy.get("[data-testid=articleCard-100000009543171]").should("exist");
+    cy.get('[data-testid^="articleCard-"]').should("exist");
   });
 
   it("Click on Select", () => {
@@ -39,6 +39,6 @@ describe("Run App ", () => {
     }).as("getArticles");
     //cy.wait("@getArticles");
     cy.wait(3000);
-    cy.get("[data-testid=articleCard-100000009570308]").should("exist").click();
+    cy.get('[data-testid^="articleCard-"]').should("exist").first().click();
   });
 });

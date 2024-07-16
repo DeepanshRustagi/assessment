@@ -12,6 +12,7 @@ export const Dashboard = () => {
 
   useEffect(() => {
     dispatch(getArticalCreator(day));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [day]);
 
   const handleChange = (
@@ -23,7 +24,12 @@ export const Dashboard = () => {
 
   return (
     <>
-      <Header day={day} onChange={handleChange} />
+      <Header
+        day={day}
+        onChange={handleChange}
+        title={"Most Popular Articles"}
+        showDays={true}
+      />
       <ArticalList articalList={articalList} />
       <Loader isLoading={loading} />
     </>

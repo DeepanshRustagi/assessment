@@ -3,7 +3,7 @@ import { GET_MOST_POPULAR_ARTICAL } from "../../common/contants";
 
 export const appState = {
   articals: [],
-  artcialInfo: {},
+  articleInfo: {},
   loading: false,
 };
 
@@ -24,6 +24,12 @@ export const appSlice = createSlice({
       return {
         ...state,
         articals: action.payload,
+      };
+    },
+    setArticleInfo: (state, action) => {
+      return {
+        ...state,
+        articleInfo: action.payload,
       };
     },
   },

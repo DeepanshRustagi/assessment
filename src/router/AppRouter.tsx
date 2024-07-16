@@ -15,6 +15,14 @@ export const AppRouter = () => {
           }
         />
         <Route
+          path={RoutesName.Detail.path}
+          element={
+            <Suspense fallback={<></>}>
+              {RoutesNameComponentMap[RoutesName.Detail.componentName]}
+            </Suspense>
+          }
+        />
+        <Route
           path="*"
           element={
             <Suspense fallback={<></>}>
