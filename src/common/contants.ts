@@ -1,0 +1,14 @@
+export const GET_MOST_POPULAR_ARTICAL = "GET_MOST_POPULAR_ARTICAL";
+export const GET_ARTICAL_DETAIL = "GET_ARTICAL_DETAIL";
+export const HTTP_OK = 200;
+export const SUCCESS_NO_CONTENT = 204;
+export const NOT_AUTHORIZED = 401;
+export const NOT_FOUND = 404;
+export const API_TIMEOUT_ERROR = 'ECONNABORTED';
+export const ERROR = 400;
+export const FORBIDDEN_ERROR = 403;
+export const INTERNAL_SERVER_ERROR = 500;
+export const TOKEN_EXPIRY_TIME = 'TOKEN_EXPIRY_TIME';
+export const ACCESS_TOKEN = 'ACCESS_TOKEN';
+export const API_TIMEOUT = 60000;
+export const DAYS_LIST = [1,7,30];
