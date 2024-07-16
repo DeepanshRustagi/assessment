@@ -29,7 +29,7 @@ const ArticalList: React.FC<ArticalListProps> = ({ articalList }) => {
             <div className="col-md-2" data-testid="publishedDate">
               {getMonthAndDate(artical?.published_date)}
             </div>
-            <div className="col-md-6">
+            <div className="col-md-7">
               <div data-testid="section">{artical?.section}</div>
                 <div className="title" data-testid="title">
                   {artical?.title}
@@ -43,7 +43,7 @@ const ArticalList: React.FC<ArticalListProps> = ({ articalList }) => {
                 COPYRIGHT - {artical?.media?.[0]?.copyright}
               </div>
             </div>
-            <div className="col-md-4 image" data-testid="image">
+            <div className="col-md-3 image" data-testid="image">
               <img
                 src={getMediaPicture(artical?.media)?.url}
                 alt={artical?.title}

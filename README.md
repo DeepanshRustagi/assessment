@@ -61,7 +61,7 @@ Above command will add cypress into your code
 It will open cypress window and cofigure some steps to add it into you code 
 After writing cypress test cases. In that window it will execute the test cases.
 
-![alt text](image.png)
+![alt text](assets/image.png)
 
-![alt text](image-1.png)
+![alt text](assets/image-1.png)
 
