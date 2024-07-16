@@ -10,8 +10,8 @@ export const Detail = () => {
   return (
     <>
       <Header
+        data-testid="header"
         day={0}
-        onChange={()=>function(){}}
         title={"Detail Page"}
         showDays={false}
       />

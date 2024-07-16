@@ -3,20 +3,20 @@ import { DAYS_LIST } from "../../common/contants";
 
 type HeaderProps = {
   day: number;
-  onChange: (
+  onChange?: (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => void;
   title: string;
   showDays: boolean;
 };
 
-const Header: React.FC<HeaderProps> = ({ day, onChange, title, showDays }) => {
+const Header: React.FC<HeaderProps> = (props) => {
   return (
     <div className="header">
       <h1 className="col heading" data-testid="mostPopularArticle">
-        {title}
+        {props?.title}
       </h1>
-      {showDays ? (
+      {props?.showDays ? (
         <div className="col selectDays">
           <h3 className="heading3" data-testid="selectDays">
             Select Days
@@ -24,8 +24,8 @@ const Header: React.FC<HeaderProps> = ({ day, onChange, title, showDays }) => {
           <select
             data-testid="selectDay"
             name="day"
-            value={day}
-            onChange={onChange}
+            value={props?.day}
+            onChange={props?.onChange}
             className="border p-2"
           >
             <option value="" disabled>

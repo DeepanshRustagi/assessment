@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 
 import Detail from "./index";
 
@@ -88,7 +88,7 @@ describe("rendering Dashboard", () => {
   const mockStore = configureStore();
   let store;
 
-  it("Shows Dashboard", () => {
+  it("Shows Details", () => {
     store = mockStore(initialState);
     render(
       <Provider store={store}>
