@@ -1,4 +1,27 @@
 
+## About the App 
+
+This is a simple app whichs show the list of Most Popular NY Articles and on click of
+article it will take you to Detail page of the article.
+
+### `Home Page`
+
+![alt text](assets/image3.png)
+
+### `Detail Page`
+
+![alt text](assets/image4.png)
+
+## Techical Stack
+
+ReactJs
+TypeScript
+Redux-Saga
+JEST
+TestingLibrary/react
+Cypress
+
+
 ## Available Scripts
 
 In the project directory, you can run:

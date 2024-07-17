@@ -12,8 +12,7 @@ export const Dashboard = () => {
 
   useEffect(() => {
     dispatch(getArticalCreator(day));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [day]);
+  }, [dispatch, day]);
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>

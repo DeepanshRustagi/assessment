@@ -1,5 +1,5 @@
 import React from "react";
-import { render} from "@testing-library/react";
+import { render } from "@testing-library/react";
 
 import Detail from "./index";
 
@@ -13,7 +13,7 @@ jest.mock("react-router-dom", () => ({
   useNavigate: () => mockedUsedNavigate,
 }));
 
-describe("rendering Dashboard", () => {
+describe("rendering Detail", () => {
   const initialState = {
     output: 10,
     appState: {
@@ -89,6 +89,26 @@ describe("rendering Dashboard", () => {
   let store;
 
   it("Shows Details", () => {
+    store = mockStore(initialState);
+    render(
+      <Provider store={store}>
+        <Detail />
+      </Provider>
+    );
+  });
+});
+
+describe("rendering Details", () => {
+  const initialState = {
+    output: 10,
+    appState: {
+      articleInfo: {},
+    },
+  };
+  const mockStore = configureStore();
+  let store;
+
+  it("Shows Details without Article Info", () => {
     store = mockStore(initialState);
     render(
       <Provider store={store}>

@@ -2,7 +2,7 @@ import React from "react";
 import { DAYS_LIST } from "../../common/contants";
 
 type HeaderProps = {
-  day: number;
+  day?: number;
   onChange?: (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => void;

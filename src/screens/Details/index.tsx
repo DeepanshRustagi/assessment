@@ -9,28 +9,27 @@ export const Detail = () => {
 
   return (
     <>
-      <Header
-        data-testid="header"
-        day={0}
-        title={"Detail Page"}
-        showDays={false}
-      />
-      <div className="detail">
-        <div className="title" data-testid="title">
-          {articalInfo?.title}
-        </div>
+      <Header title={"Detail Page"} showDays={false} />
+      {Object?.keys(articalInfo)?.length !== 0 ? (
+        <div className="detail">
+          <div className="title" data-testid="title">
+            {articalInfo?.title}
+          </div>
 
-        <img
-          src={getMediaPicture(articalInfo?.media)?.url}
-          alt={articalInfo?.title}
-          width={"50%"}
-          height={"45%"}
-        />
+          <img
+            src={getMediaPicture(articalInfo?.media)?.url}
+            alt={articalInfo?.title}
+            width={"50%"}
+            height={"45%"}
+          />
 
-        <div className="descriptionDetail" data-testid="description">
-          {articalInfo?.abstract}
+          <div className="descriptionDetail" data-testid="description">
+            {articalInfo?.abstract}
+          </div>
         </div>
-      </div>
+      ) : (
+        <div>No Article Found</div>
+      )}
     </>
   );
 };
