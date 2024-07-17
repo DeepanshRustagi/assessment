@@ -12,13 +12,18 @@ article it will take you to Detail page of the article.
 
 ![alt text](assets/image4.png)
 
-## Techical Stack
+## Technical Stack
 
 ReactJs
+
 TypeScript
+
 Redux-Saga
+
 JEST
+
 TestingLibrary/react
+
 Cypress
 
 
